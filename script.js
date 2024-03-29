@@ -12,6 +12,7 @@ async function getMeaning(word){
 
     try {
 			infoEl.classList.remove('hide_it');
+            meaningBoxEl.classList.add('hide_it');
 			infoEl.innerText = `Searching the meaning of ${word}...`;
             let result = await fetch(apiUrl).then((r) => r.json());
             //console.log(result);
